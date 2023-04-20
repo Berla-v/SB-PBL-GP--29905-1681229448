@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.dashboard {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      
+      .filters {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-right: 20px;
+      }
+      
+      input[type=date], button {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 20px;
+      }
+      
+      button {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      .metrics {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      
+      .metric {
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+      }
+      
+      .metric h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .metric .value {
+        font-size: 36px;
+        font-weight: bold;
+      }
+      
+      .charts {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .chart {
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 48%;
+      }
+      
+      .chart h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Financial Performance Dashboard</h1>
+        <div class="filters">
+          <label for="date-range">Date Range:</label>
+          <input type="date" id="start-date" name="start-date">
+          <input type="date" id="end-date" name="end-date">
+          <button id="filter-btn">Filter</button>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <h2>Revenue</h2>
+            <p class="value">₹100,000,000,00</p>
+          </div>
+          <div class="metric">
+            <h2>Expenses</h2>
+            <p class="value">₹50,000,000</p>
+          </div>
+          <div class="metric">
+            <h2>Profit</h2>
+            <p class="value">₹50,000,000</p>
+          </div>
+        </div>
+        <div class="charts">
+          <div class="chart">
+            <h2>Revenue by Month</h2>
+            <canvas id="revenue-chart"></canvas>
+          </div>
+          <div class="chart">
+            <h2>Expenses by Category</h2>
+            <canvas id="expenses-chart"></canvas>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
